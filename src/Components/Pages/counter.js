@@ -9,14 +9,9 @@ export default class Counter extends Component {
     };
   }
 
-  countUp = () => {
-    this.setState({
-      count: this.state.count + 1,
-    });
-  };
-  countDown = (event) => {
-    this.setState({
-      count: this.state.count - 1,
+  handleClickCounter = (number) => {
+    this.setState((state) => {
+      return { count: state.count + number };
     });
   };
 
@@ -25,10 +20,10 @@ export default class Counter extends Component {
       <div className='button-container'>
         <h1>Counter</h1>
         <div className='button-wrapper'>
-          <button className='btn' onClick={this.countUp}>
+          <button className='btn' onClick={() => this.handleClickCounter(+1)}>
             +
           </button>
-          <button className='btn' onClick={this.countDown}>
+          <button className='btn' onClick={() => this.handleClickCounter(-1)}>
             -
           </button>
         </div>
