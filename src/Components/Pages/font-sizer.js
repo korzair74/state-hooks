@@ -17,7 +17,7 @@ export default class FontSizer extends Component {
 
   render() {
     return (
-      <div className='button-container'>
+      <div className='container-wrapper'>
         <h1>Change Font Size</h1>
         <div>
           <button className='btn' onClick={() => this.handleFontChanger(+5)}>

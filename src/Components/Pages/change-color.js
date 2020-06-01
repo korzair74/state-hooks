@@ -5,19 +5,21 @@ export default class ChangeColor extends Component {
     super(props);
     this.state = {
       color: "",
-      value: "",
+      newColor: "",
     };
   }
 
-  handleChange = (event) => {
-    this.setState({
-      value: event.target.value,
-    });
+  onChange = (event) => {
     event.preventDefault();
-  };
-  onSubmit = (event) => {
     this.setState({
-      color: this.state.value,
+      color: event.target.value,
+    });
+  };
+
+  onSubmit = (event) => {
+    event.preventDefault();
+    this.setState({
+      newColor: this.state.color,
     });
   };
 
@@ -28,23 +30,24 @@ export default class ChangeColor extends Component {
 
   render() {
     return (
-      <div className='button-container'>
+      <div className='container-wrapper'>
         <h1>Change Color</h1>
-        <div className='button-wrapper'>
-          <h2 style={{ color: this.state.color }}>My Color Changes</h2>
+        <div className='wrapper'>
+          <h2 style={{ color: this.state.newColor }}>My Color Changes</h2>
         </div>
-        <div className='button-wrapper'>
+        <div className='wrapper'>
           <form onSubmit={this.handleSubmit} className='form-wrapper'>
             <input
               type='text'
               placeholder='Color'
-              onChange={this.handleChange}
+              onChange={this.onChange}
+              value={this.state.value}
             />
             <button
-              style={{ color: this.state.color }}
+              type='submit'
+              style={{ color: this.state.newColor }}
               className='btn'
-              value={this.state.color}
-              onClick={this.handleSubmit}>
+              onClick={this.onSubmit}>
               Change Color
             </button>
           </form>

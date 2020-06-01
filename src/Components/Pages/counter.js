@@ -17,9 +17,9 @@ export default class Counter extends Component {
 
   render() {
     return (
-      <div className='button-container'>
+      <div className='container-wrapper'>
         <h1>Counter</h1>
-        <div className='button-wrapper'>
+        <div className='wrapper'>
           <button className='btn' onClick={() => this.handleClickCounter(+1)}>
             +
           </button>

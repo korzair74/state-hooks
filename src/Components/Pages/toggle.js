@@ -19,9 +19,9 @@ export default class Toggle extends Component {
 
   render() {
     return (
-      <div className='button-container'>
+      <div className='container-wrapper'>
         <h1>This Toggle</h1>
-        <div className='button-wrapper'>
+        <div className='wrapper'>
           <button className='btn' onClick={this.toggle}>
             {this.state.on ? "Hello" : "Goodbye"}
           </button>

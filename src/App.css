@@ -1,50 +1,50 @@
 .App {
-	text-align: center;
+  text-align: center;
 }
 
 .navbar-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	height: 8vh;
-	background-color: #4f5b80;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  background-color: #4f5b80;
 }
 
 .navbar-wrapper a {
-	color: #00ff22;
-	text-decoration: none;
+  color: #00ff22;
+  text-decoration: none;
 }
 
 .navbar-wrapper > .nav-link-wrapper > .nav-link-active {
-	font-size: 1.5em;
-	color: #00ffff;
-	text-decoration: none;
+  font-size: 1.5em;
+  color: #00ffff;
+  text-decoration: none;
 }
-.button-container {
-	display: grid;
-	grid-template-columns: 1fr;
-	align-items: center;
-	justify-items: center;
+.container-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
 }
-.button-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding-top: 30px;
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
 }
 .btn {
-	display: inline-block;
-	padding: 0.3em 1.2em;
-	margin: 0 0.3em 0.3em 0;
-	border-radius: 2em;
-	box-sizing: border-box;
-	text-decoration: none;
-	font-weight: 300;
-	color: #ffffff;
-	background-color: #4eb5f1;
-	text-align: center;
-	transition: all 0.2s;
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #4eb5f1;
+  text-align: center;
+  transition: all 0.2s;
 }
 .btn:hover {
-	background-color: #4095c6;
+  background-color: #4095c6;
 }

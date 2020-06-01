@@ -17,9 +17,9 @@ export default class ShowHide extends Component {
 
   render() {
     return (
-      <div className='button-container'>
+      <div className='container-wrapper'>
         <h1>Show and Hide</h1>
-        <div className='button-wrapper'>
+        <div className='wrapper'>
           <button className='btn' onClick={this.toggle}>
             {this.state.show ? "Show" : "Hide"}
           </button>
