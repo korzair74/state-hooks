@@ -1,16 +1,24 @@
 import React, { Component } from "react";
 
-const red = "#b71c1c";
-const green = "#1b5e20";
 export default class ChangeColor extends Component {
   constructor(props) {
     super(props);
-    this.state = { color: red };
+    this.state = {
+      color: "",
+      value: "",
+    };
   }
 
-  changeColor = () => {
-    const newColor = this.state.color === green ? red : green;
-    this.setState({ color: newColor });
+  handleChange = (event) => {
+    this.setState({
+      value: event.target.value,
+    });
+    event.preventDefault();
+  };
+  onSubmit = (event) => {
+    this.setState({
+      color: this.state.value,
+    });
   };
 
   colorPicker = () => {
@@ -26,12 +34,20 @@ export default class ChangeColor extends Component {
           <h2 style={{ color: this.state.color }}>My Color Changes</h2>
         </div>
         <div className='button-wrapper'>
-          <button
-            style={{ color: this.state.color }}
-            className='btn'
-            onClick={this.changeColor}>
-            Change Color
-          </button>
+          <form onSubmit={this.handleSubmit} className='form-wrapper'>
+            <input
+              type='text'
+              placeholder='Color'
+              onChange={this.handleChange}
+            />
+            <button
+              style={{ color: this.state.color }}
+              className='btn'
+              value={this.state.color}
+              onClick={this.handleSubmit}>
+              Change Color
+            </button>
+          </form>
         </div>
         <div className='button-wrapper'>
           <button className='btn' onClick={this.colorPicker}>
