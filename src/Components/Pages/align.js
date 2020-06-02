@@ -19,11 +19,19 @@ export default class Align extends Component {
         <div className='container-wrapper'>
           <h1>Align Component</h1>
           <div className='wrapper'>
-            <button onClick={() => this.handlePosition("Left")}>Left</button>
-            <button onClick={() => this.handlePosition("Center")}>
+            <button className='btn' onClick={() => this.handlePosition("Left")}>
+              Left
+            </button>
+            <button
+              className='btn'
+              onClick={() => this.handlePosition("Center")}>
               Center
             </button>
-            <button onClick={() => this.handlePosition("Right")}>Right</button>
+            <button
+              className='btn'
+              onClick={() => this.handlePosition("Right")}>
+              Right
+            </button>
           </div>
         </div>
         <div>

@@ -9,17 +9,18 @@ export default class ChangeColor extends Component {
     };
   }
 
-  onChange = (event) => {
+  handleChange = (event) => {
     event.preventDefault();
     this.setState({
       color: event.target.value,
     });
   };
 
-  onSubmit = (event) => {
+  handleSubmit = (event) => {
     event.preventDefault();
     this.setState({
       newColor: this.state.color,
+      color: "",
     });
   };
 
@@ -40,14 +41,13 @@ export default class ChangeColor extends Component {
             <input
               type='text'
               placeholder='Color'
-              onChange={this.onChange}
-              value={this.state.value}
+              onChange={this.handleChange}
+              value={this.state.color}
             />
             <button
               type='submit'
               style={{ color: this.state.newColor }}
-              className='btn'
-              onClick={this.onSubmit}>
+              className='btn'>
               Change Color
             </button>
           </form>

@@ -44,6 +44,7 @@
   background-color: #4eb5f1;
   text-align: center;
   transition: all 0.2s;
+  padding: 10px;
 }
 .btn:hover {
   background-color: #4095c6;
